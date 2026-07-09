@@ -1,9 +1,10 @@
-import React from 'react'
+import TodoList from './TodoList'
+import './App.css'
 
-const App = () => {
+function App() {
   return (
     <div>
-      App
+      <TodoList />
     </div>
   )
 }
