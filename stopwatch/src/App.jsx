@@ -4,7 +4,7 @@ import Stopwatch from "./Stopwatch"
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Stopwatch />
     </div>
   )

@@ -1,12 +1,17 @@
-.time{
-    font-size: 6rem;
+.time {
+  font-size: 6rem;
+  width: 300px;
 }
 
-.stopwatch{
-    display: flex;
-    flex-direction: column;
+.time {
+  font-size: 6rem;
 }
 
-.stopwatch div button{
-    margin-inline: 10px;
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-bottom: 10px;
 }
