@@ -1,13 +1,44 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 const ToastContainer = () => {
+  const [toasts, setToasts] = useState([]);
+  const timeRef = useRef({});
+  console.log(timeRef);
+  const handleClose = (id) => {
+    clearTimeout(timeRef.current[id]);
+    delete timeRef.current[id];
+    setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id));
+  };
+  const handleAdd = (message, type) => {
+    const id = new Date().getTime();
+    const newToasts = [...toasts, { id, message, type }];
+    setToasts(newToasts);
+    timeRef.current[id] = setTimeout(() => handleClose(id), 5000);
+  };
   return (
     <div className="container">
+      {
+        <div className="toast-container">
+          {toasts.map(({ id, message, type }) => {
+            return (
+              <div key={id} className={`toast ${type}`}>
+                {" "}
+                {message}
+                <span onClick={() => handleClose(id)}>x</span>
+              </div>
+            );
+          })}
+        </div>
+      }
       <div className="btn-container">
-        <button>Success Toast</button>
-        <button>Info Toast</button>
-        <button>Warning Toast</button>
-        <button>Error Toast</button>
+        <button onClick={() => handleAdd("Success", "success")}>
+          Success Toast
+        </button>
+        <button onClick={() => handleAdd("Info", "info")}>Info Toast</button>
+        <button onClick={() => handleAdd("Warning", "warning")}>
+          Warning Toast
+        </button>
+        <button onClick={() => handleAdd("Error", "error")}>Error Toast</button>
       </div>
     </div>
   );

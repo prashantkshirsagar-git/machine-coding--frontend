@@ -1,0 +1,49 @@
+.toast-container {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toast {
+  width: 12rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  position: relative;
+  animation: slide 1s 1;
+}
+
+.toast span {
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.toast.success {
+  background-color: green;
+}
+
+.toast.info {
+  background-color: #2196f3;
+}
+
+.toast.warning {
+  background-color: #ff9800;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
