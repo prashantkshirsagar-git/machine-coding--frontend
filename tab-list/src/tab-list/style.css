@@ -1,0 +1,3 @@
+button[data-Selected="true"]{
+    background-color: red;
+}
