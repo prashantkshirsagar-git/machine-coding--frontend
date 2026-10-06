@@ -1,0 +1,15 @@
+.popover-wrapper {
+  display: inline-block;
+}
+
+.popover-content {
+  position: fixed;
+  z-index: 1000;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #1a202c;
+  pointer-events: auto; 
+}
