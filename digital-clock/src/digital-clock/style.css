@@ -1,0 +1,6 @@
+.digital-clock {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    gap: 12px;
+}
