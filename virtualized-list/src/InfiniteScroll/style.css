@@ -1,0 +1,16 @@
+.infinite-scroll-without-optimization {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  border: 1px solid red;
+}
+
+.is-row {
+  position: absolute;
+}
+
+.infinite-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid green;
+}
