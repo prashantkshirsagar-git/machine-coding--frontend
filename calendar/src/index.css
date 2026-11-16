@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.calendar {
+  position: relative;
+  background: white;
+}
+
+.line {
+  position: absolute;
+  left: 4rem;
+  width: 1px;
+  height: 100%;
+  background-color: lightgrey;
+  z-index: 1;
+}
+
+.slot {
+  width: 100%;
+  height: 5rem;
+  border-bottom: 1px solid lightgray;
+  padding-left: 1rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+
+.time-label {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.event {
+  position: absolute;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.4rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  overflow: hidden;
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  gap: 0.15rem;
+}
+
+.event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  background-color: #87ceeb;
+}
+
+.event-title {
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.event-time {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.2;
+}
